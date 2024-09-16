@@ -37,3 +37,4 @@
 # Home page par jo newcolltions hain ab us image ko database se lane ke liye endpoint banayenge using get method
 # Creating endpoint for popular in women shop routes
 # Creating endpoint for adding products in cartdata in shopcontext.jsx inside addToCart
+# Creating endpoint to remove product from cartdata
