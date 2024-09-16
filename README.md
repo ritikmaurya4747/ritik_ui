@@ -38,3 +38,4 @@
 # Creating endpoint for popular in women shop routes
 # Creating endpoint for adding products in cartdata in shopcontext.jsx inside addToCart
 # Creating endpoint to remove product from cartdata
+# Creating endpoint to get cartdata
