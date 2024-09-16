@@ -36,3 +36,4 @@
 # image admin panel ke trhough data base me store kiye ab use using fetch frontend me show karenge  
 # Home page par jo newcolltions hain ab us image ko database se lane ke liye endpoint banayenge using get method
 # Creating endpoint for popular in women shop routes
+# Creating endpoint for adding products in cartdata in shopcontext.jsx inside addToCart

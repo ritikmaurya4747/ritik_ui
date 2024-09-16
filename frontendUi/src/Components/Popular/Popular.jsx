@@ -9,6 +9,7 @@ function Popular() {
     .then((response)=>response.json())
     .then((data)=>setPopularProduct(data))
   },[])
+  
   return (
     <div className='popular'>
         <h1>POPULAR IN WOMEN</h1>
