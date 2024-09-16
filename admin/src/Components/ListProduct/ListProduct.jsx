@@ -5,7 +5,7 @@ import cross_icon from "../../assets/cross_icon.png"; // 7:10:11
 function ListProduct() {
   const [allproducts, setAllProducts] = useState([]);
   const fetchInfo = async () => {
-    await fetch("http://localhost:4000/allproducts")
+    await fetch("https://styleboom-c.onrender.com/allproducts")
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
@@ -17,7 +17,7 @@ function ListProduct() {
   }, []);
   
   const remove_product = async (id) =>{
-    await fetch('http://localhost:4000/removeproduct',{
+    await fetch('https://styleboom-c.onrender.com/removeproduct',{
       method: "POST",
       headers:{
         Accept: 'Application/json',

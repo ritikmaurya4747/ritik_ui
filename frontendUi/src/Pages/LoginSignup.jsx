@@ -17,7 +17,7 @@ function LoginSignup() {
   const login = async () => {
     console.log("Login Funtion Executed", formData);
     let responseData;
-    await fetch('http://localhost:4000/login',{
+    await fetch('https://styleboom-c.onrender.com/login',{
       method:"POST",
       headers:{
         Accept: 'application/formData',
@@ -36,7 +36,7 @@ function LoginSignup() {
   const signup = async () => {
     // console.log("Signup Funtion Executed", formData);
     let responseData;
-    await fetch('http://localhost:4000/signup',{
+    await fetch('https://styleboom-c.onrender.com/signup',{
       method:'POST',
       headers:{
         Accept:'application/formData',

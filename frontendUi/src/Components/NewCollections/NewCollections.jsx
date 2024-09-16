@@ -5,7 +5,7 @@ import Item from '../Item/Item'
 function NewCollections() {
   const [new_collections,setNew_collections] = useState([])
   useEffect(()=>{
-    fetch('http://localhost:4000/newcollection')
+    fetch('https://styleboom-c.onrender.com/newcollection')
     .then((response)=>response.json())
     .then((data)=>setNew_collections(data))
   },[])
