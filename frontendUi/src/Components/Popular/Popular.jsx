@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Popular.css'
-import data_product from '../Assets/data'
 import Item from '../Item/Item'
 
 function Popular() {
+  const [data_product, setData_product] = useState([]);
+  useEffect(()=>{
+    fetch('http://localhost:4000/popularinwomen')
+    .then((response)=>response.json())
+    .then((data)=>setData_product(data))
+  },[])
   return (
     <div className='popular'>
         <h1>POPULAR IN WOMEN</h1>
@@ -23,4 +28,4 @@ function Popular() {
   )
 }
 
-export default Popular
+export default Popular;

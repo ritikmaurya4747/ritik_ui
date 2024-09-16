@@ -35,3 +35,4 @@
 # Now going to make Logout functionality in Navbar using ternary operator
 # image admin panel ke trhough data base me store kiye ab use using fetch frontend me show karenge  
 # Home page par jo newcolltions hain ab us image ko database se lane ke liye endpoint banayenge using get method
+# Creating endpoint for popular in women shop routes
