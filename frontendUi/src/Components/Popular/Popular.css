@@ -1,0 +1,95 @@
+.popular{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 90vh;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+.popular h1{
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+}
+.popular hr{
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #252522;
+}
+.popular-item{
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+    /* border: 1px solid red; ye thoda probelemtic hain */
+    height: 280px;
+}
+.popular-item img{
+    border-radius: 10px;
+}
+
+
+
+
+
+@media(max-width:1280px){
+    .popular{
+        height: 70vh;
+    }
+    .popular h1{
+        font-size: 40px;
+    }
+    .popular hr{
+        width: 160px;
+        height: 4px;
+    }
+    .popular-item{
+        gap: 20px;
+        margin-top: 30px;
+    }
+}
+@media(max-width:1024px){
+    .popular{
+        height: 80vh;
+    }
+    .popular h1{
+        font-size: 35px;
+    }
+    .popular hr{
+        width: 160px;
+        height: 3px;
+    }
+    .popular-item{
+        gap: 20px;
+        margin-top: 30px;
+    }
+}
+@media(max-width:800px){
+    .popular{
+        height: 80vh;
+    }
+    .popular h1{
+        font-size: 30px;
+    }
+    .popular hr{
+        width: 140px;
+    }
+    .popular-item{
+        gap: 10px;
+        height: 200px;
+    }
+    
+}
+@media(max-width:500px){
+    .popular{
+        height: 750px;
+        padding: 0px 20px;
+    }
+    .popular-item{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 98px;
+       
+    }
+}
