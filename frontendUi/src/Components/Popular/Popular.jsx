@@ -3,18 +3,18 @@ import './Popular.css'
 import Item from '../Item/Item'
 
 function Popular() {
-  const [data_product, setData_product] = useState([]);
+  const [popularProducts, setPopularProduct] = useState([]);
   useEffect(()=>{
     fetch('http://localhost:4000/popularinwomen')
     .then((response)=>response.json())
-    .then((data)=>setData_product(data))
+    .then((data)=>setPopularProduct(data))
   },[])
   return (
     <div className='popular'>
         <h1>POPULAR IN WOMEN</h1>
         <hr />
         <div className="popular-item">
-            {data_product.map((item,i) => {
+            {popularProducts.map((item,i) => {
                 return <Item 
                 key={i}
                 id={item.id}
