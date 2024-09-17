@@ -61,7 +61,7 @@ app.use('/images',express.static('upload/images'))
 app.post('/upload',upload.single('product'),(req,res) => {
     res.json({
         success: 1,
-        image_url: `https://styleboom-c.onrender.com${PORT}/images/${req.file.filename}`
+        image_url: `https://styleboom-c.onrender.com/images/${req.file.filename}`
     })
 })
 
