@@ -47,7 +47,7 @@ app.get('/', (req,res)=>{
 
 // Image Storage Engine
 const storage = multer.diskStorage({
-    destination: './upload/images',
+    destination: 'src={`https://styleboom-backend.onrender.com/images/${imageName}`}',
     filename: (req,file,cb) => {
         return cb(null,`${file.fieldname}${Date.now()}${path.extname(file.originalname)}`)
     }
