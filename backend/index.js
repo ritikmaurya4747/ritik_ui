@@ -15,9 +15,13 @@ const MONGODB_URI = process.env.MONGODB_URI
 
 const corsOptions = {
     origin: ['https://styleboom-frontend.onrender.com', 'https://styleboom-admin.onrender.com'],
-    optionsSuccessStatus: 200
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+    optionsSuccessStatus: 200 // Some legacy browsers choke on 204
 };
-app.use(cors(corsOptions));
+
+app.use(cors(corsOptions)); // Apply CORS globally
+
 app.use(express.json());
 
 
