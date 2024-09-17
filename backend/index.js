@@ -28,8 +28,8 @@ app.use(express.json());
 // Database Connection With MongoDB
 try {
     await mongoose.connect(MONGODB_URI,{
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+        // useNewUrlParser: true,
+        // useUnifiedTopology: true,
         tls: true,  // Enable TLS/SSL
         tlsAllowInvalidCertificates: true ,
     })
