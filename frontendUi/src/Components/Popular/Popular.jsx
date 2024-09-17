@@ -6,7 +6,8 @@ function Popular() {
   const [popularProducts, setPopularProduct] = useState([]);
   useEffect(()=>{
     fetch('https://styleboom-c.onrender.com/popularinwomen')
-    .then((response)=>response.json())
+    .then((response)=>{console.log(response); return response.json()}
+    )
     .then((data)=>setPopularProduct(data))
   },[])
   
