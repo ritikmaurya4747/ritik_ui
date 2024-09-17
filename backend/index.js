@@ -47,7 +47,7 @@ app.get('/', (req,res)=>{
 
 // Image Storage Engine
 const storage = multer.diskStorage({
-    destination: 'src={`https://styleboom-backend.onrender.com/images/${imageName}`}',
+    destination: './upload/images',
     filename: (req,file,cb) => {
         return cb(null,`${file.fieldname}${Date.now()}${path.extname(file.originalname)}`)
     }
@@ -58,12 +58,25 @@ const upload = multer({storage:storage})
 // Creating Upload Endpoint for images
 app.use('/images',express.static('upload/images'))
 
-app.post('/upload',upload.single('product'),(req,res) => {
+// app.post('/upload',upload.single('product'),(req,res) => {
+//     res.json({
+//         success: 1,
+//         image_url: `https://styleboom-c.onrender.com${PORT}/images/${req.file.filename}`
+//     })
+// })
+
+app.post('/upload', upload.single('product'), (req, res) => {
+    const baseUrl = process.env.NODE_ENV === 'production' 
+        ? 'https://styleboom-c.onrender.com' // Use your deployed backend URL in production
+        : `http://localhost:${PORT}`; // Use localhost in development
+
     res.json({
         success: 1,
-        image_url: `https://styleboom-c.onrender.com${PORT}/images/${req.file.filename}`
-    })
-})
+        image_url: `${baseUrl}/images/${req.file.filename}` // Construct URL using baseUrl
+    });
+});
+
+
 
 // Schema for creating products   ( 05:30:10 )
 const Product = mongoose.model('Product',{
