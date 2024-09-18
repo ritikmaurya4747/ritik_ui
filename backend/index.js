@@ -58,12 +58,13 @@ const upload = multer({storage:storage})
 // Creating Upload Endpoint for images
 app.use('/images',express.static('upload/images'))
 
-app.post('/upload',upload.single('product'),(req,res) => {
+app.post('/upload', upload.single('product'), (req, res) => {
     res.json({
         success: 1,
-        image_url: `https://styleboom-c.onrender.com${PORT}/images/${req.file.filename}`
-    })
-})
+        image_url: `https://styleboom-c.onrender.com/images/${req.file.filename}`
+    });
+});
+
 
 // Schema for creating products   ( 05:30:10 )
 const Product = mongoose.model('Product',{
