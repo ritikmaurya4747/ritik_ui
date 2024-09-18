@@ -7,7 +7,10 @@ function Popular() {
   useEffect(()=>{
     fetch('https://styleboom-c.onrender.com/popularinwomen')
     .then((response)=>response.json())
-    .then((data)=>setPopularProduct(data))
+    .then((data)=>{
+      console.log("Data: ", data);
+      
+      setPopularProduct(data)})
   },[])
   return (
     <div className='popular'>
