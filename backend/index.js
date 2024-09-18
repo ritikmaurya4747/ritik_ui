@@ -232,9 +232,10 @@ app.get('/newcollection',async (req,res)=>{
 app.get('/popularinwomen',async (req,res)=>{
     let products = await Product.find({category:"women"});
     let popular_in_women = products.slice(0,4);
-    console.log("Popular in women fetched");
     console.log(popular_in_women);
+    console.log("Popular in women fetched");
     res.send(popular_in_women);
+    console.log(popular_in_women);
     
 })
 
