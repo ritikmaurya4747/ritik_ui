@@ -25,6 +25,7 @@ app.use(cors(corsOptions)); // Apply CORS globally
 app.use(express.json());
 
 
+
 // Database Connection With MongoDB
 try {
     await mongoose.connect(MONGODB_URI,{
