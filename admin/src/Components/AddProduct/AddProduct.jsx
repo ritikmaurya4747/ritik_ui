@@ -34,7 +34,9 @@ function AddProduct() {
         Accept: 'application/json', 
       },
       body: formData,
-    }).then((resp)=> resp.json()).then((data)=>{responseData = data});
+    }).then((resp)=> resp.json()).then((data)=>{
+      console.log(data);
+      responseData = data});
     if(responseData.success)
       {
       product.image = responseData.image_url;
