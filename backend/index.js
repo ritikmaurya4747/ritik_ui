@@ -67,6 +67,7 @@ const upload = multer({storage:storage})
 app.use('/images',express.static('upload/images'))
 
 app.post('/upload', upload.single('product'), (req, res) => {
+    console.log("file name : ", req.file.filename);
     res.json({
         success: 1,
         image_url: `https://styleboom-c.onrender.com/images/${req.file.filename}`
