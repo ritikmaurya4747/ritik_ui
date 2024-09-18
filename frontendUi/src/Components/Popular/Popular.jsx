@@ -8,7 +8,6 @@ function Popular() {
     fetch('https://styleboom-c.onrender.com/popularinwomen')
     .then((response)=>response.json())
     .then((data)=>{
-      console.log("Data: ", data);
       setPopularProduct(data)})
   },[])
   return (

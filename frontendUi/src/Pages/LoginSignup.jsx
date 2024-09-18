@@ -15,7 +15,7 @@ function LoginSignup() {
   };
 
   const login = async () => {
-    console.log("Login Funtion Executed", formData);
+    // console.log("Login Funtion Executed", formData);
     let responseData;
     await fetch('https://styleboom-c.onrender.com/login',{
       method:"POST",
